@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar';
+import { AppRoutes } from './Routes';
+import Head from './components/Header';
+import { BrowserRouter } from 'react-router-dom'
 
-function App() {
+
+import { nanoid } from 'nanoid';
+
+const App = () => {
+  const theGoods = window.location.href.match(/[^\/]+$/)
+    ? ['about', 'tech', 'art', 'exp', 'contact'].filter(
+        (word) => word !== window.location.href.match(/[^\/]+$/)[0]
+      )
+    : ['about', 'tech', 'art', 'exp', 'contact'];
+
+  const headerMap = theGoods.map(function(descTitle, i){
+    const node = <Head key={nanoid()} 
+    slideDir={i % 2 === 0 ? 'slide__left' : 'slide__right'} 
+    title={descTitle}></Head>
+    return node
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <BrowserRouter>
+      <Navbar />
+      <AppRoutes />
+      {headerMap}
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
