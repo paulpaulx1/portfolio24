@@ -1,9 +1,30 @@
-import React, { useRef, useState } from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
+const NavTitle = styled.h1`
+  h1 {
+    &.nav__text {
+      &.art__title {
+        &.slide__top {
+          margin: 0; /* Remove default margin */
+          font-size: 2rem; /* Adjust font size as needed */
+        }
+      }
+    }
 
-export default () => {
-  return <h1>
-    <h1 className="nav__text art__title slide__top"><Link to={"/about"}  className="header__name">paulmneenan</Link></h1>
-  </h1>
-}
+    .header__name {
+      font-size: 5rem;
+    }
+  }
+`;
+
+const Navigation = () => (
+  <NavTitle className={'art__title slide__top'}>
+    <Link to="/about" className="header__name">
+      paulmneenan
+    </Link>
+  </NavTitle>
+);
+
+export default Navigation;

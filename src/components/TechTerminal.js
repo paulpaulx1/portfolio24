@@ -34,19 +34,21 @@ const TechItem = styled.li`
 
 const techSkills = [
   'JavaScript',
-  'CSS3',
-  'HTML5',
-  'Responsive UI',
-  'WCAG2.0 Standards',
+  'CSS',
+  'HTML',
   'React',
   'Redux',
+  'Webpack',
   'Python',
   'Langchain',
   'jQuery',
   'Node',
-  'RESTful routing',
-  'Databases / ORMs',
-  'Git',
+  'Version control',
+  'Prompting LLMs',
+  'Consuming RESTful and GraphQL APIs',
+  'Asking questions',
+  'Written communication',
+  'Project documentation',
 ];
 
 const Tech = () => {

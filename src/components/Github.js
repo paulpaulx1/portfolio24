@@ -29,11 +29,11 @@ const ProjectItem = styled.li`
 `;
 
 // Placeholder data for GitHub and projects
-const githubUsername = 'yourGitHubUsername';
+const githubUsername = 'paulpaulx1';
 const projects = [
-  'Project 1',
-  'Project 2',
-  'Project 3',
+  'Phreditor',
+  'PDF Chatter',
+  'Aether',
   // Add more projects as needed
 ];
 

@@ -30,22 +30,33 @@ const StyledWelcomeContainer = styled.div`
     line-height: 1.5;
     margin-bottom: 15px;
   }
+
+  .profile-image {
+    float: right;
+    margin-right: 20px;
+    max-width: 150px; /* Adjust the max width as needed */
+    border-radius: 10px;
+  }
+
+  .clear-float {
+    clear: both;
+  }
 `;
 
 const WelcomeMessage = () => {
-
   const [typingActive, setTypingActive] = useState(true);
 
   const handleTypingComplete = () => {
     setTypingActive(false);
   };
 
-return (
-  <StyledWelcomeContainer>
-    <Typewriter typing={4} minDelay={1} maxDelay={1}>
-      <h1>Welcome to PAUL's World</h1>
+  return (
+    <StyledWelcomeContainer>
+      <img src={'https://res.cloudinary.com/doadukwfh/image/upload/v1703088496/portrait_rgxaky.jpg'} alt="Profile" className="profile-image" />
+      <Typewriter typing={4} minDelay={1}>
+      <h1>Welcome to Paul's World</h1>
       <p>
-        Hello there! I'm PAUL, and I warmly welcome you to my digital space. Here, I share my passion,
+        Hi! I'm Paul, and I warmly welcome you to my digital space. Here, I share my passion,
         creativity, and insights on [topics/niche] with the world. Allow me to give you a glimpse into who I am
         and what you can expect from this corner of the internet.
       </p>
@@ -83,7 +94,7 @@ return (
         Thank you for stopping by and being a part of this exciting adventure. Let's explore, learn, and create
         together!
       </p>
-      <p>Best, PAUL</p>
+      <p>Best, Paul</p>
     </Typewriter>
   </StyledWelcomeContainer>
 )}
