@@ -3,23 +3,24 @@ import Typewriter from 'react-typewriter';
 import styled from 'styled-components';
 
 const TechContainer = styled.div`
-  max-width: 340px;
+  max-width: fit-content;
   min-height: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #000;
-  color: #ffea00;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(84, 84, 84, 0.97);
+  color: whitesmoke;
+  font-family: Inconsolata, 'Courier New', Courier, monospace;
   white-space: nowrap;
   overflow: hidden;
-  border: 2px solid #ffea00;
+  border: 2px solid whitesmoke;;
   border-radius: 5px;
 `;
 
 const TechTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #ffea00;
+  color: whitesmoke;
+  text-transform: uppercase;
 `;
 
 const TechList = styled.ul`
@@ -45,7 +46,7 @@ const techSkills = [
   'Node',
   'Version control',
   'Prompting LLMs',
-  'Consuming RESTful and GraphQL APIs',
+  'Consuming APIs',
   'Asking questions',
   'Written communication',
   'Project documentation',
@@ -70,7 +71,7 @@ const Tech = () => {
 
   return (
     <TechContainer>
-      <TechTitle>Technical Skills</TechTitle>
+      <TechTitle>Skillz</TechTitle>
       <TechList>
         {visibleSkills.map((skill, index) => (
           <TechItem key={index}>

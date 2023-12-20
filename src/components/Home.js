@@ -56,8 +56,7 @@ const WelcomeMessage = () => {
       <Typewriter typing={4} minDelay={1}>
       <h1>Welcome to Paul's World</h1>
       <p>
-        Hi! I'm Paul, and I warmly welcome you to my digital space. Here, I share my passion,
-        creativity, and insights on [topics/niche] with the world. Allow me to give you a glimpse into who I am
+        Hi. I'm Paul. Welcome to my digital space. I'm a software developer and artist. Allow me to give you a glimpse into who I am
         and what you can expect from this corner of the internet.
       </p>
       <h2>About Me</h2>

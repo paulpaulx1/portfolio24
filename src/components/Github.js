@@ -3,19 +3,19 @@ import styled from 'styled-components';
 
 const GitHubContainer = styled.div`
   padding: 20px;
-  background-color: #000;
-  color: #ffea00;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(84, 84, 84, 0.97);
+  color: whitesmoke;
+  font-family: Inconsolata, 'Courier New', Courier, monospace;
   white-space: nowrap;
   overflow: hidden;
-  border: 2px solid #ffea00;
+  border: 2px solid whitesmoke;
   border-radius: 5px;
 `;
 
 const GitHubTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #ffea00;
+  color: whitesmoke;
 `;
 
 const ProjectList = styled.ul`
