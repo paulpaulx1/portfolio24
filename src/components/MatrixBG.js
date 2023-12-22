@@ -23,7 +23,6 @@ function MatrixBackground({ timeout }) {
 
         const columns = Math.floor(width / 15); // Adjust the character density
         const charSize = Math.floor(width / columns);
-        const rows = Math.floor(height / charSize) + 1;
         const yPositions = Array.from({ length: columns }).fill(0);
 
         const matrixEffect = () => {

@@ -45,7 +45,7 @@ const Tech = ({skills, title}) => {
     }, 200);
 
     return () => clearInterval(interval);
-  }, [visibleSkills]);
+  }, [visibleSkills, skills]);
 
   return (
     <>

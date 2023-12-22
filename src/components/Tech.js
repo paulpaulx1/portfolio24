@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Tech from './TechTerminal'; // Import your Technical Skills component here
-import Github from './Github';
 import MatrixBackground from './MatrixBG';
 import { softSkills, techSkills } from '../constants/skills'
 

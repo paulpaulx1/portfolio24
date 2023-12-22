@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Typewriter from 'react-typewriter';
 
@@ -71,21 +71,7 @@ const StyledWelcomeContainer = styled.div`
   }
 `;
 
-const GifContainer = styled.div`
-  background-image: url(https://www.sohamdutta.com/static/media/overlay.742d52e07299e7788d10.png);
-  background-size: 100% 100%;
-  width:28vw;
-  height: 23vw;
-  float: right;
-  border-radius:5px;
-`
-
 const WelcomeMessage = () => {
-  const [typingActive, setTypingActive] = useState(true);
-
-  const handleTypingComplete = () => {
-    setTypingActive(false);
-  };
 
   return (
     <StyledWelcomeContainer>

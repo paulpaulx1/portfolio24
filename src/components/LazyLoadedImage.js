@@ -6,9 +6,9 @@ import { ArtworkLabel } from './ArtworkLabel';
 import './art.css'; // Import your stylesheet
 
 export const LazyLoadedImage = ({ src, alt, slideDir, title, dimensions, material }) => {
-  const [loaded, setLoaded] = React.useState(false);
-  const [modalIsOpen, setModalIsOpen] = React.useState(false);
-  const [modalHasOpened, setModalHasOpened] = React.useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalHasOpened, setModalHasOpened] = useState(false);
 
   const handleImageLoad = () => {
     setLoaded(true);

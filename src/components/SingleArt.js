@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { artArray } from '../constants/img_map';
-import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 
 const SingleArt = () => {

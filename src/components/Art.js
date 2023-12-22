@@ -1,7 +1,6 @@
 import { nanoid } from "nanoid";
 import React from "react";
-import { Link } from "react-router-dom";
-import { artArray, imageMap } from "../constants/img_map";
+import { artArray } from "../constants/img_map";
 import { LazyLoadedImage } from "./LazyLoadedImage";
 import { art_titles } from '../constants/art_titles'
 
