@@ -12,14 +12,6 @@ const fadeIn = keyframes`
   }
 `;
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
 
 const TimelineContainer = styled.div`
   display: flex;
