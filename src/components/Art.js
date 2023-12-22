@@ -13,6 +13,7 @@ const Art = () => (
         src={title}
         alt={`Artwork ${i + 1}`}
         title={art_titles[i]}
+        key={nanoid()}
       />
     ))}
   </div>

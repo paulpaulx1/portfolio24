@@ -16,6 +16,7 @@ const GitHubTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: whitesmoke;
+  text-transform: uppercase;
 `;
 
 const ProjectList = styled.ul`
@@ -39,7 +40,7 @@ const projects = [
 
 const GitHub = () => (
   <GitHubContainer>
-    <GitHubTitle>GitHub Repositories</GitHubTitle>
+    <GitHubTitle>GitHub Repos</GitHubTitle>
     <p>GitHub: {githubUsername}</p>
     <ProjectList>
       {projects.map((project, index) => (

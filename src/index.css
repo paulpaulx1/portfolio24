@@ -2,6 +2,7 @@
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -11,6 +12,7 @@
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -20,6 +22,7 @@
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -29,10 +32,12 @@
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-100%);
   }
 }
+
 
 .slide__right {
   animation: 1s ease-out 0s 1 slideInRight;
@@ -46,8 +51,53 @@
   animation: 1s ease-out 0s 1 slideInTop;
 }
 
-.slide__botom {
+.slide__bottom {
   animation: 1s ease-out 0s 1 slideInBottom;
+}
+
+@keyframes turn-on {
+  0% {
+    filter: brightness(30);
+    -webkit-filter: brightness(30);
+    opacity: 1;
+    transform: scaleY(.8) translateZ(0);
+    -webkit-transform: scaleY(.8) translateZ(0);
+  }
+
+  3.5% {
+    transform: scaleY(.8) translate3d(0, 100%, 0);
+    -webkit-transform: scaleY(.8) translate3d(0, 100%, 0);
+  }
+
+  3.6% {
+    opacity: 1;
+    transform: scaleY(.8) translate3d(0, -100%, 0);
+    -webkit-transform: scaleY(.8) translate3d(0, -100%, 0);
+  }
+
+  9% {
+    filter: brightness(30);
+    -webkit-filter: brightness(30);
+    opacity: 0;
+    transform: scale(1.3, .6) translate3d(0, 100%, 0);
+    -webkit-transform: scale(1.3, .6) translate3d(0, 100%, 0);
+  }
+
+  11% {
+    filter: contrast(0) brightness(0) saturate(1);
+    -webkit-filter: contrast(0) brightness(0) saturate(1);
+    opacity: 0;
+    transform: scale(1) translateZ(0);
+    -webkit-transform: scale(1) translateZ(0);
+  }
+
+  100% {
+    filter: contrast(1.075) brightness(1.14) saturate(1.3);
+    -webkit-filter: contrast(1.075) brightness(1.14) saturate(1.3);
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+    -webkit-transform: scale(1) translateZ(0);
+  }
 }
 
 body {
@@ -56,9 +106,9 @@ body {
 }
 
 .art__title {
-  background-color: rgb(237, 237, 237);
+  background-color: whitesmoke;
   font-size: 18vw;
-  color: rgba(70, 70, 70, 0.63);;
+  color: rgba(43, 43, 43, 0.63);
   margin: 4px;
   text-align: center;
   transition: all 0.2s ease-in-out;
@@ -67,12 +117,15 @@ body {
 .art__title:hover {
   cursor: pointer;
   transform: scale(1.1);
-  color: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgb(19, 19, 19); 
-  text-shadow: 0 0 10px #ffea00, 0 0 20px #ffab02; /* Set the shadow for the glow effect */
+  color: rgb(38, 38, 38);
+  text-shadow: 0 0 10px #ffea00, 0 0 20px #ffab02;
 }
 
+a.art__title {
+  color: rgba(84, 84, 84, 0.97);
+  font-weight: 800;
+  transition: all 0.2s ease-in-out;
+}
 
 body {
   margin: 0;
@@ -82,8 +135,14 @@ body {
 a {
   text-decoration: none;
   display: inline-block;
-  margin-right: 10px;
-  color: #fff;
+}
+a.header__name {
+  color: rgba(84, 84, 84, 0.97);
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
 }
 
 body {
@@ -98,12 +157,9 @@ body * {
   box-sizing: border-box;
 }
 
-a {
-  color: rgba(84, 84, 84, 0.97);
-  font-weight: 800;
-  transition: all 0.2s ease-in-out;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
 
 .artgrid {
@@ -120,11 +176,13 @@ a {
   margin: 10px;
   cursor: zoom-in;
 }
+
 .art__img {
   width: 21rem;
   flex-grow: 1;
   margin: 10px;
 }
+
 .image-container {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -160,52 +218,36 @@ html {
   scroll-behavior: smooth;
 }
 
-.row {
-  margin: 0 -15px;
-}
-
 * {
-  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1s; /* Firefox < 16 */
-   -ms-animation: fadein 1s; /* Internet Explorer */
-    -o-animation: fadein 1s; /* Opera < 12.1 */
-       animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s;
 }
 
 
 @keyframes fadein {
-from { opacity: 0; }
-to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .singleartwrapper {
   display: flex;
   justify-content: center;
 }
-/* @media only screen and (max-width: 700px) { 
-  ul.navbarlinks {
-    /* flex-direction: row; */
-
-img.singleartimg {
-  margin: 20px;
-  height: 80vh;
-}
-.artdrag {
-  height: 200px;
-}
-
-.switch-wrapper {
-  position: relative;
-}
-
-.switch-wrapper > div {
-  position: absolute;
-}
-
 
 .titlewrapper {
   width: 100vw;
   background-color: rgb(30, 30, 31);
   text-align: center;
 }
-

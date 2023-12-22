@@ -3,10 +3,14 @@ import styled from 'styled-components';
 import Typewriter from 'react-typewriter';
 
 const StyledWelcomeContainer = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
+  max-width: 100vw;
+  padding: 4vw;
+  font-family: 'Raleway', Courier, monospace;
+  font-weight: 500;  
+  min-height: 400px;
+  margin: 10px;
+  color: rgba(84, 84, 84, 0.97) 
+  background-color: whitesmoke;;
 
   h1 {
     font-size: 2rem;
@@ -38,10 +42,43 @@ const StyledWelcomeContainer = styled.div`
     border-radius: 10px;
   }
 
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.91;
+    }
+  }
+  
+  .profile-gif {
+    width: 100%; // Adjust width as needed
+    border-radius: 10px; // Optional: Add border-radius for rounded corners
+    float: right;
+    margin: 20px;
+    max-width: 25vw; /* Adjust the max width as needed */
+    border-radius: 10px;
+    animation: flicker .25s infinite;
+  }
+  @media screen and (max-width: 800px) {
+    .profile-gif {
+      max-width: 35vw;
+    }
+  }
+
   .clear-float {
     clear: both;
   }
 `;
+
+const GifContainer = styled.div`
+  background-image: url(https://www.sohamdutta.com/static/media/overlay.742d52e07299e7788d10.png);
+  background-size: 100% 100%;
+  width:28vw;
+  height: 23vw;
+  float: right;
+  border-radius:5px;
+`
 
 const WelcomeMessage = () => {
   const [typingActive, setTypingActive] = useState(true);
@@ -52,48 +89,35 @@ const WelcomeMessage = () => {
 
   return (
     <StyledWelcomeContainer>
-      <img src={'https://res.cloudinary.com/doadukwfh/image/upload/v1703088496/portrait_rgxaky.jpg'} alt="Profile" className="profile-image" />
-      <Typewriter typing={4} minDelay={1}>
+
+      <img className="profile-gif slide__right" src="https://res.cloudinary.com/doadukwfh/image/upload/v1703098720/ezgif.com-video-to-gif-converted_ditfw1.gif" alt="skateboarding circa 2002" />
+
+      <Typewriter typing={10} minDelay={1}>
       <h1>Welcome to Paul's World</h1>
+      <p>Hello! I'm Paul. Welcome to my digital space. I have two cats (Buddy and Fin), 
+        both of whom constantly demand high quality food and empty cardboard boxes. 
+        I used to build stuff out of wood to maintain the influx of cardboard boxes and 
+        luxury catfood but I became a developer in 2020, and I've been an artist for a long time 
+        before that.</p>
+      <h2>DEV</h2>
       <p>
-        Hi. I'm Paul. Welcome to my digital space. I'm a software developer and artist. Allow me to give you a glimpse into who I am
-        and what you can expect from this corner of the internet.
+        I made this site in part to convince people with web dev problems that they 
+        should hire me to solve them. It's built with styled React components, 
+        bundled with webpack, and deployed via Netlify. These were the best tools for this
+        particular job but I can work across the stack in multiple languages.
+        If you want to know more about my professional experience and what I can do for you 
+        check out the tech tab.
       </p>
-      <h2>About Me</h2>
+      <h2>ARTIST</h2>
       <p>
-        I am a [profession/interest] enthusiast with a profound love for [specific interests or activities].
-        Whether I'm [engaging in a hobby, pursuing a career, or exploring new adventures], my goal is to bring a
-        touch of [your unique perspective or approach] to everything I do. Through this website, I hope to
-        connect with like-minded individuals who share a similar zest for [your main themes].
+        I've made some paintings and painting-adjacent sculptures that hang on the wall (like paintings). 
+        You can view them by clicking on the 'art' tab. The paintings are generally titled by the location they
+        depict but I sometimes take artistic license when naming them.  The sculpture-adjacent pieces have titles that describe
+        what they are as objects but one is just called "Toast" and it's made out of wood and lacquer. 
+        In "The Sims", released February 4, 2000 by Maxis/EA, when you buy art you can increase the "room score".
+        If you're interested in increasing your "room score" by all means HMU 908-358-2150 paulmneenan@gmail.com.
+        Negotiable sliding scale.
       </p>
-      <h2>What to Expect</h2>
-      <h3>[Section 1]</h3>
-      <p>
-        [Describe the primary focus of your content. This could be your main area of expertise, the topics you'll
-        cover, or the type of content you'll share.]
-      </p>
-      <h3>[Section 2]</h3>
-      <p>
-        [Highlight the unique qualities that set your website apart. This could include your personal
-        experiences, perspectives, or the special approach you bring to your chosen niche.]
-      </p>
-      <h3>[Section 3]</h3>
-      <p>
-        [Share your vision for the website and what you hope visitors will gain from their time here. Whether
-        it's knowledge, inspiration, or a sense of community, let your audience know what you're striving to
-        offer.]
-      </p>
-      <h2>Let's Connect</h2>
-      <p>
-        I believe in the power of community and the beauty of shared experiences. I invite you to join me on
-        this journey. Connect with me on [social media platforms], and don't hesitate to reach out. Your
-        thoughts, insights, and feedback are always valued.
-      </p>
-      <p>
-        Thank you for stopping by and being a part of this exciting adventure. Let's explore, learn, and create
-        together!
-      </p>
-      <p>Best, Paul</p>
     </Typewriter>
   </StyledWelcomeContainer>
 )}
