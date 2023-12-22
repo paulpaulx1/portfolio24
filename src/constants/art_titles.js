@@ -7,6 +7,7 @@ export const art_titles = [
     "Waldeinsamkeit",
     "Orchard",
     "Saint Francis",
+    'North Woods Tree',
     "Twig",
     "Polar Caves NH",
     "Wave Columns",

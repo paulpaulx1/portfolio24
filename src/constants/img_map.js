@@ -6,6 +6,7 @@ export const artArray = [
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084164/compressed%20portfolio/north_woods_creek_fngrbc.jpg",
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084170/compressed%20portfolio/waldeinsamkeit_s8lx8s.jpg",
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084166/compressed%20portfolio/great_lawn_wlksuk.jpg",
+    'north_woods_tree.jpeg',
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084171/compressed%20portfolio/saint_francis_dne6jx.jpg",
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084172/compressed%20portfolio/north_woods_twiggy_i7d0v6.jpg",
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084168/compressed%20portfolio/polar_caves_nh_oidjvp.jpg",
