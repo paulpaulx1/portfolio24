@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Tech from './TechTerminal'; // Import your Technical Skills component here
+import Tech from './TechTerminal'; 
+import Projects from './Projects'; 
 import MatrixBackground from './MatrixBG';
 import { softSkills, techSkills } from '../constants/skills'
 
@@ -40,6 +41,7 @@ const Wrapper = () => (
   <div>
   <MatrixBackground/>
   <WrapperContainer>
+    <Projects></Projects>
     <Column>
       <Tech skills={techSkills} title={'Tech Skills'} />
     </Column>

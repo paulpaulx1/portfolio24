@@ -26,20 +26,6 @@ const TimelineContainer = styled.div`
   flex-wrap: wrap; /* Allow items to wrap onto a new line */
 `;
 
-const ConstellationLine = styled.div`
-  width: 2px;
-  height: 100px;
-  background-color: #3498db; /* Choose your constellation line color */
-`;
-
-const ConstellationDot = styled.div`
-  width: 12px;
-  height: 12px;
-  background-color: #3498db; /* Choose your constellation dot color */
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  animation: ${rotate} 6s linear infinite;
-`;
-
 const TimelineItem = styled.div`
   position: relative;
   width: 200px; /* Adjust the width as needed */
@@ -61,38 +47,55 @@ const AnimatedContent = styled.div`
 const Timeline = () => {
   return (
     <TimelineContainer>
-      <ConstellationLine />
-      <ConstellationDot style={{ marginLeft: '20px' }} />
-      <ConstellationDot style={{ marginLeft: '40px' }} />
-
       <TimelineItem>
         <AnimatedContent>
-          <h3>MFA in Fine Arts</h3>
-          <p>Brooklyn College</p>
-          <p>Location: Brooklyn, NY</p>
-          <p>Duration: Month Year - Month Year</p>
-          <p>Received Master of Fine Arts degree</p>
+          <h3>BFA</h3>
+          <p>Alfred University</p>
+          <p>Location: NYSSC</p>
         </AnimatedContent>
       </TimelineItem>
 
       <TimelineItem>
         <AnimatedContent>
-          <h3>Job Title</h3>
+          <h3>MFA</h3>
+          <p>Brooklyn College</p>
+          <p>Location: Brooklyn, NY</p>
+        </AnimatedContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <AnimatedContent>
+          <h3>Woodshop Manager</h3>
           <p>Pop Chart Lab</p>
           <p>Location: Brooklyn, NY</p>
           <p>Duration: 2013 - 2018</p>
           <p>Responsibilities and achievements...</p>
         </AnimatedContent>
       </TimelineItem>
-
       <TimelineItem>
         <AnimatedContent>
-          <h3>Job Title</h3>
+          <h3>Finisher</h3>
           <p>Bednark</p>
           <p>Location: Brooklyn, NY</p>
           <p>Duration: 2018 - 2020</p>
           <p>Responsibilities and achievements...</p>
         </AnimatedContent>
+      </TimelineItem>
+      <TimelineItem>
+        <AnimatedContent>
+          <h3>Fullstack Academy</h3>
+          <p>Completion Certificate</p>
+          <p>Duration: 2020 - 2021</p>
+          <p>From PostgresSQL ={'>'} Sassy CSS </p>
+        </AnimatedContent> 
+      </TimelineItem>
+      <TimelineItem>
+        <AnimatedContent>
+          <h3>Wunderkind</h3>
+          <p>Integrations Engineer</p>
+          <p>Duration: Aug 2021. - Dec. 2023</p>
+          <p>Integrated proprietary software to client sites</p>
+        </AnimatedContent> 
       </TimelineItem>
     </TimelineContainer>
   );
