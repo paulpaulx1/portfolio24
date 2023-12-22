@@ -75,7 +75,7 @@ const Timeline = () => {
       <TimelineItem>
         <AnimatedContent>
           <h3>Finisher</h3>
-          <p>Bednark</p>
+          <p>Euro Custom Woodworks</p>
           <p>Location: Brooklyn, NY</p>
           <p>Duration: 2018 - 2020</p>
           <p>Responsibilities and achievements...</p>
