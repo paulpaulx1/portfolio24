@@ -12,7 +12,7 @@ export const artArray = [
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084170/compressed%20portfolio/wave_columns_nkqfh6.jpg",
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084164/compressed%20portfolio/battery_k2x6px.jpg",
     "https://res.cloudinary.com/doadukwfh/image/upload/v1703084166/compressed%20portfolio/object_8_cdywim.jpg",
-    "https://res.cloudinary.com/doadukwfh/image/upload/v1703084164/compressed%20portfolio/bGify_lzohnl.jpg",
+    "blinky.jpg",
     "toast.JPG",
     "foldpanel.JPG",
     "niceeaster.JPG",
