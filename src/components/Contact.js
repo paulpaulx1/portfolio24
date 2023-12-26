@@ -28,21 +28,28 @@ export const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('Sending');
-    axios({
-      method: 'POST',
-      url: 'localhost:3000/contact',
-      data: { name, email, message, status },
-    }).then((response) => {
-      if (response.data.status === 'sent') {
-        alert('Message Sent');
-        setName('');
-        setEmail('');
-        setMessage('');
-        setStatus('Submit');
-      } else if (response.data.status === 'failed') {
-        alert('Message Failed');
-      }
-    });
+  
+    try {
+      axios({
+        method: 'POST',
+        url: '/.netlify/functions/sendEmail',
+        data: { name, email, message, status },
+      }).then((response) => {
+        if (response.data.status === 'sent') {
+          alert('Message Sent');
+          setName('');
+          setEmail('');
+          setMessage('');
+          setStatus('Submit');
+        } else if (response.data.status === 'failed') {
+          alert('Message Failed');
+        }
+      });
+    } catch (error) {
+      console.error(error);
+      // Handle the error here, e.g., show an error message to the user
+      // You can also set the status back to 'Submit' if needed
+    }
   };
   //did it work
 
