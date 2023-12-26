@@ -35,6 +35,7 @@ export const Contact = () => {
         url: '/.netlify/functions/sendEmail',
         data: { name, email, message, status },
       }).then((response) => {
+        console.log(response);
         if (response.data.status === 'sent') {
           alert('Message Sent');
           setName('');
