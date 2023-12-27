@@ -52,7 +52,7 @@ const Form = styled.form`
     border-radius: 4px;
     font-size: 14px;
     color: #333;
-    min-height:250px;
+    min-height:25vh;
     border: 2px solid rgba(84, 84, 84, 0.5);
   }
 
