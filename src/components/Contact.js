@@ -27,10 +27,14 @@ const Form = styled.form`
   position: relative;
   z-index: 2;
   max-width: 100vw; // Adjust as needed for layout
-  height: 55vh;
-  width: 85%;
+  height: auto; // Adjust height to fit content
+  width: auto;
+  position: absolute;
+  top: auto;
+  bottom: auto;
   border: 2px solid rgba(84, 84, 84, 0.5);
   border-radius: 4px;
+  color: #545454f7;
 
   div {
     margin-bottom: 15px;
@@ -39,8 +43,9 @@ const Form = styled.form`
   label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
     font-size: 14px;
+    font-family: 'Raleway';
+    max-width: 440px;
   }
 
   /* Apply styles specifically to textarea */
@@ -52,9 +57,32 @@ const Form = styled.form`
     border-radius: 4px;
     font-size: 14px;
     color: #333;
-    min-height:22vh;
+    min-height:20vh;
+    min-width: 60vw;
     border: 2px solid rgba(84, 84, 84, 0.5);
+    font-family: 'Raleway';
+
   }
+
+  @media screen and (max-width: 500px) and (max-height: 680px) {
+    textarea { min-height: 14vh; }
+    div { margin-bottom: 8px; }
+  }
+
+  @media screen and (orientation: landscape) {
+    height: auto; 
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    font-size: 12px;
+    padding: 12px;
+  }
+
+    div {
+      margin-bottom: 5px; // Adjust spacing
+    }
+  }
+
 
   button {
     width: 100%;
@@ -66,6 +94,8 @@ const Form = styled.form`
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    font-family: 'Raleway';
+    min-width: 60vw;
   }
 
   button:hover {
@@ -81,10 +111,12 @@ const InputField = styled.input`
   border-radius: 4px;
   font-size: 14px;
   border: 2px solid rgba(84, 84, 84, 0.6);
+  max-width: 440px;
 `;
 
 const TextArea = styled.textarea`
   width: 100%;
+  max-width: 440px;
   padding: 8px 10px;
   background-color: #f7f7f7cc;
   border: 1px solid #ddd;
