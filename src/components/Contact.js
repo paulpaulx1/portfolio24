@@ -1,23 +1,115 @@
-import React, { useState } from 'react';
-import axios from 'axios'
+import React, { useState } from "react";
+import axios from "axios";
+import styled, { keyframes } from "styled-components";
+
+const ContactFormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+`;
+
+const StyledVideo = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 1;
+`;
+
+const Form = styled.form`
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  max-width: 100vw; // Adjust as needed for layout
+  height: 60vh;
+  width: 85%;
+  border: 2px solid rgba(84, 84, 84, 0.5);
+  border-radius: 4px;
+
+  div {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+  }
+
+  /* Apply styles specifically to textarea */
+  textarea {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #f7f7f7cc;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    min-height:250px;
+    border: 2px solid rgba(84, 84, 84, 0.5);
+  }
+
+  button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgba(84, 84, 84, 0.97);
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+`;
+
+const InputField = styled.input`
+  width: 50%; // Adjust this width as needed
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  background-color: #f7f7f7cc;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 2px solid rgba(84, 84, 84, 0.6);
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  padding: 8px 10px;
+  background-color: #f7f7f7cc;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+`;
+
 
 export const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('Submit');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("Submit");
 
   const handleChange = (e) => {
     const field = e.target.id;
-  
+
     switch (field) {
-      case 'name':
+      case "name":
         setName(e.target.value);
         break;
-      case 'email':
+      case "email":
         setEmail(e.target.value);
         break;
-      case 'message':
+      case "message":
         setMessage(e.target.value);
         break;
       default:
@@ -27,23 +119,23 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('Sending');
-  
+    setStatus("Sending");
+
     try {
       axios({
-        method: 'POST',
-        url: '/.netlify/functions/sendEmail',
+        method: "POST",
+        url: "/.netlify/functions/sendEmail",
         data: { name, email, message, status },
       }).then((response) => {
         console.log(response);
-        if (response.data.status === 'sent') {
-          alert('Message Sent');
-          setName('');
-          setEmail('');
-          setMessage('');
-          setStatus('Submit');
-        } else if (response.data.status === 'failed') {
-          alert('Message Failed');
+        if (response.status === 200) {
+          alert("Message Sent");
+          setName("");
+          setEmail("");
+          setMessage("");
+          setStatus("Submit");
+        } else if (response.data.status === "failed") {
+          alert("Message Failed");
         }
       });
     } catch (error) {
@@ -52,65 +144,47 @@ export const Contact = () => {
       // You can also set the status back to 'Submit' if needed
     }
   };
-  //did it work
-
-  const inputStyle = {
-    backgroundColor: 'rgba(222, 222, 222, 0.25)',
-    borderColor: '#dddddd',
-    borderRadius: '2px',
-    borderStyle: 'solid',
-  };
 
   return (
-    <div
-      className='contactform'
-      style={{ display: 'flex', justifyContent: 'center', padding: 20 }}
-    >
-      <form onSubmit={(e) => handleSubmit(e)} method='POST'>
+    <ContactFormContainer>
+      <StyledVideo autoPlay loop muted playsInline>
+        <source src="https://d1eow6qsunz0n0.cloudfront.net/assets/fpo/video.mp4" type="video/mp4" />
+      </StyledVideo>
+      <Form onSubmit={(e) => handleSubmit(e)} method="POST">
         <div>
-          <label htmlFor='name'>Name:</label>
-          <br />
-          <input
-            type='text'
-            id='name'
+          <label htmlFor="name">Name:</label>
+          <InputField
+            type="text"
+            id="name"
             value={name}
             onChange={(e) => handleChange(e)}
             required
-            style={inputStyle}
           />
         </div>
         <div>
-          <label htmlFor='email'>Email:</label>
-          <br />
-          <input
-            type='email'
-            id='email'
+          <label htmlFor="email">Email:</label>
+          <InputField
+            type="email"
+            id="email"
             value={email}
             onChange={(e) => handleChange(e)}
             required
-            style={inputStyle}
           />
         </div>
         <div>
-          <label htmlFor='message'>Message:</label>
-          <br />
-          <textarea
-            id='message'
+          <label htmlFor="message">Message:</label>
+          <TextArea
+            id="message"
             value={message}
             onChange={(e) => handleChange(e)}
             required
-            style={{
-              width: '75vw',
-              height: '200px',
-              backgroundColor: 'rgba(222, 222, 222, 0.25)',
-              borderColor: '#dddddd',
-              borderRadius: '2px',
-            }}
-            placeholder={'What a nice website! I would like to hire you!'}
+            placeholder="What a nice website! I would like to hire you!"
           />
         </div>
-        <button style={{backgroundColor:'transparent', padding:5, borderStyle: 'solid', borderColor: '#dddddd'}} type='submit'>{status}</button>
-      </form>
-    </div>
+        <button type="submit">{status}</button>
+      </Form>
+    </ContactFormContainer>
   );
-}
+};
+
+export default Contact;
