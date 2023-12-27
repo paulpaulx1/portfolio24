@@ -27,7 +27,7 @@ const Form = styled.form`
   position: relative;
   z-index: 2;
   max-width: 100vw; // Adjust as needed for layout
-  height: 60vh;
+  height: 55vh;
   width: 85%;
   border: 2px solid rgba(84, 84, 84, 0.5);
   border-radius: 4px;
@@ -52,7 +52,7 @@ const Form = styled.form`
     border-radius: 4px;
     font-size: 14px;
     color: #333;
-    min-height:25vh;
+    min-height:22vh;
     border: 2px solid rgba(84, 84, 84, 0.5);
   }
 
