@@ -22,7 +22,7 @@ const StyledVideo = styled.video`
 
 const Form = styled.form`
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.92);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;

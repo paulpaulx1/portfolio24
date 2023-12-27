@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': [ 'https://paulmneenan.com/', 'http://localhost:3000/', 'http://localhost:8888/' ], 
+        'Access-Control-Allow-Origin': 'https://paulmneenan.com',
         'Access-Control-Allow-Headers': 'Content-Type',
       },
       body: JSON.stringify({ message: 'Email sent successfully' }),
