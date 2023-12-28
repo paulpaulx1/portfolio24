@@ -70,10 +70,6 @@ const Form = styled.form`
   }
 
   @media screen and (orientation: landscape) {
-    height: auto; 
-    position: absolute;
-    top: auto;
-    bottom: auto;
     font-size: 12px;
     padding: 12px;
   }
@@ -203,7 +199,7 @@ export const Contact = () => {
             required
           />
         </div>
-        <div>
+        <div style={{flex: 1}}>
           <label htmlFor="message">Message:</label>
           <TextArea
             id="message"

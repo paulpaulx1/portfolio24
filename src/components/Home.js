@@ -1,16 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
-import Typewriter from 'react-typewriter';
 
 const StyledWelcomeContainer = styled.div`
+  position: relative;
   max-width: 100vw;
   padding: 4vw;
   font-family: 'Raleway', Courier, monospace;
-  font-weight: 500;  
+  font-weight: 500;
   min-height: 400px;
   margin: 10px;
-  color: rgba(84, 84, 84, 0.97) 
-  background-color: whitesmoke;;
+  color: rgba(84, 84, 84, 0.97);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://res.cloudinary.com/doadukwfh/image/upload/v1703720310/DALL_E_2023-12-27_18.11.39_-_A_digital_background_for_Welcome_to_Paul_s_World_enhanced_with_a_Memphis_design_style._Incorporate_bold_geometric_shapes_and_a_vibrant_contrastin_nsp6q7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    animation: fadeBackground 4s ease-in-out forwards;
+  }
+
+  @keyframes fadeBackground {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.15;
+    }
+  }
 
   h1 {
     font-size: 2rem;
@@ -56,7 +80,7 @@ const StyledWelcomeContainer = styled.div`
     border-radius: 10px; // Optional: Add border-radius for rounded corners
     float: right;
     margin: 20px;
-    max-width: 25vw; /* Adjust the max width as needed */
+    max-width: 25vw;
     border-radius: 10px;
     animation: flicker .25s infinite;
   }
@@ -73,12 +97,11 @@ const StyledWelcomeContainer = styled.div`
 
 const WelcomeMessage = () => {
 
+
   return (
     <StyledWelcomeContainer>
-
       <img className="profile-gif slide__right" src="https://res.cloudinary.com/doadukwfh/image/upload/v1703098720/ezgif.com-video-to-gif-converted_ditfw1.gif" alt="skateboarding circa 2002" />
 
-      <Typewriter typing={10} minDelay={1}>
       <h1>Welcome to Paul's World</h1>
       <p>Hello! I'm Paul. Welcome to my digital space. I have two cats (Buddy and Fin), 
         both of whom constantly demand high quality food and empty cardboard boxes. 
@@ -103,9 +126,8 @@ const WelcomeMessage = () => {
         In "The Sims", released February 4, 2000 by Maxis/EA, when you buy art you can increase the "room score".
         If you're interested in increasing your "room score" by all means HMU 908-358-2150 paulmneenan@gmail.com.
         Negotiable sliding scale.
-      </p>
-    </Typewriter>
-  </StyledWelcomeContainer>
+      </p>  
+      </StyledWelcomeContainer>
 )}
 
 export default WelcomeMessage;
