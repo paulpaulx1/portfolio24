@@ -5,9 +5,10 @@ const pickRandom = (array) => array[Math.floor(Math.random() * array.length)];
 
 function MatrixBackground({ timeout }) {
     const canvas = useRef();
-    const brightColors = ['#F0A', '#0FA', '#AF0', '#A0F']; // Replace with actual bright colors from the image
 
     useEffect(() => {
+        const brightColors = ['#F0A', '#0FA', '#AF0', '#A0F']; 
+
         const context = canvas.current.getContext('2d');
         let width = window.innerWidth;
         let height = window.innerHeight;
@@ -56,7 +57,7 @@ function MatrixBackground({ timeout }) {
             clearInterval(interval);
             window.removeEventListener('resize', resizeCanvas);
         };
-    }, [brightColors]);
+    }, []);
 
     return (
         <div
