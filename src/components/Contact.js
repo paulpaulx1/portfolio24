@@ -108,6 +108,9 @@ const InputField = styled.input`
   font-size: 14px;
   border: 2px solid rgba(84, 84, 84, 0.6);
   max-width: 440px;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const TextArea = styled.textarea`

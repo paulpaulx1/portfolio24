@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 
+// Helper function to pick a random element from an array
+const pickRandom = (array) => array[Math.floor(Math.random() * array.length)];
+
 function MatrixBackground({ timeout }) {
     const canvas = useRef();
+    const brightColors = ['#F0A', '#0FA', '#AF0', '#A0F']; // Replace with actual bright colors from the image
 
     useEffect(() => {
         const context = canvas.current.getContext('2d');
@@ -13,7 +17,7 @@ function MatrixBackground({ timeout }) {
             height = window.innerHeight;
             canvas.current.width = width;
             canvas.current.height = height;
-            context.fillStyle = 'rgba(84, 84, 84, 0.97)';
+            context.fillStyle = 'rgba(0, 0, 0, 0.97)';
             context.fillRect(0, 0, width, height);
         };
 
@@ -26,13 +30,14 @@ function MatrixBackground({ timeout }) {
         const yPositions = Array.from({ length: columns }).fill(0);
 
         const matrixEffect = () => {
-            context.fillStyle = 'rgba(84, 84, 84, 0.04)';
+            context.fillStyle = 'rgba(0, 0, 0, 0.04)';
             context.fillRect(0, 0, width, height);
-            /** */
-            context.fillStyle = 'whitesmoke';
-            context.font = `${charSize}px monospace`;
-
+            
             yPositions.forEach((y, index) => {
+                // Randomly pick a bright color for each character
+                context.fillStyle = pickRandom(brightColors);
+                context.font = `${charSize}px monospace`;
+
                 const text = String.fromCharCode(Math.random() * 128);
                 const x = index * charSize;
                 context.fillText(text, x, y);
@@ -51,12 +56,12 @@ function MatrixBackground({ timeout }) {
             clearInterval(interval);
             window.removeEventListener('resize', resizeCanvas);
         };
-    }, []);
+    }, [brightColors]);
 
     return (
         <div
             style={{
-                background: 'rgba(84, 84, 84, 0.97)',
+                background: 'rgba(0, 0, 0, 0.97)',
                 overflow: 'hidden',
                 position: 'fixed',
                 height: '100%',
