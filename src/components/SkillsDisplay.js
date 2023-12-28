@@ -3,13 +3,16 @@ import styled from 'styled-components';
 
 const SkillsContainer = styled.div`
   padding: 20px;
-  background-color: #ffcccc; /* Pastel Red */
+  background-color: rgba(255, 255, 255, 0.92);
   border-radius: 10px;
   margin: 10px 0;
+  color: #545454f7;
 `;
 
 const SkillTitle = styled.h2`
   font-size: 24px;
+  font-family: 'Raleway';
+  color: #545454f7;
 `;
 
 const SkillList = styled.ul`
@@ -18,11 +21,13 @@ const SkillList = styled.ul`
 `;
 
 const SkillItem = styled.li`
-  background-color: #33cccc; /* Teal */
+  background-color: #f7f7f7cc;
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: 'Raleway';
+  color: #333;
 `;
 
 const SkillsDisplay = ({ skills, title }) => (

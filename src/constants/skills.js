@@ -1,17 +1,37 @@
-export const techSkills = [
+
+
+  export const languages = [
     "JavaScript",
-    "CSS",
+    "Typescript",
+    "CSS/SCSS/SASS",
     "HTML",
-    "React",
-    "Redux",
-    "Webpack",
     "Python",
-    "Langchain",
-    "jQuery",
-    "Node",
-    "Version control",
-    "Consuming APIs",
-  ];
+  ]
+
+  export const libraries = [
+    'React',
+    'Redux',
+    'jQuery',
+    'Langchain',
+    'Three.js',
+  ]
+
+  export const tech = [
+    'Consuming APIs (GQL/REST)',
+    'Node',
+    'Version Control',
+    'ORMs / DBs',
+    "Content Management Systems",
+    'Serverless Functions',
+    "Prompting LLM's"
+  ]
+
+  export const nonTechSkills = [
+    'Meticulous Project Documentation',
+    'Written Communication',
+    'Asking Good Questions',
+    'Independent Research AKA Figuring Shit Out',
+  ]
   
  export const softSkills = [
     "Writing",
@@ -19,7 +39,7 @@ export const techSkills = [
     "Project documentation",
     "Written communication",
     "Pair programming",
-    "Supporting Teammates",
+    "Dinner-party Conversation",
   ];
 
   
