@@ -6,10 +6,10 @@ const StyledWelcomeContainer = styled.div`
   max-width: 100vw;
   padding: 4vw;
   font-family: 'Raleway', Courier, monospace;
-  font-weight: 500;
+  font-weight: 600;
   min-height: 400px;
   margin: 10px;
-  color: rgba(84, 84, 84, 0.97);
+  color: rgba(60, 60, 60, 0.97);
   overflow: hidden;
 
   &::before {
@@ -23,18 +23,34 @@ const StyledWelcomeContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 1;
-    animation: fadeBackground 4s ease-in-out forwards;
+    animation: fadeBackground 5s ease-in-out forwards;
+    z-index: -1;
   }
 
   @keyframes fadeBackground {
-    from {
+    0% {
       opacity: 1;
     }
-    to {
-      opacity: 0.15;
+    100% {
+      opacity: 0.1;
     }
   }
+
+  h1, h2, h3, p {
+    opacity: 0;
+    animation: fadeInText 5s ease-in-out forwards;
+  }
+
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
 
   h1 {
     font-size: 2rem;
@@ -124,7 +140,7 @@ const WelcomeMessage = () => {
         depict but I sometimes take artistic license when naming them.  The sculpture-adjacent pieces have titles that describe
         what they are as objects but one is just called "Toast" and it's made out of wood and lacquer. 
         In "The Sims", released February 4, 2000 by Maxis/EA, when you buy art you can increase the "room score".
-        If you're interested in increasing your "room score" by all means HMU 908-358-2150 paulmneenan@gmail.com.
+        If you're interested in increasing your "room score" by all means HMU 908-358-2150 paulmneenan@gmail.com or click the "contact" tab.
         Negotiable sliding scale.
       </p>  
       </StyledWelcomeContainer>
