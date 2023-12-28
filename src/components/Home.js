@@ -23,7 +23,7 @@ const StyledWelcomeContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: fadeBackground 5s ease-in-out forwards;
+    animation: fadeBackground 3s ease-in-out forwards;
     z-index: -1;
   }
 
@@ -38,7 +38,7 @@ const StyledWelcomeContainer = styled.div`
 
   h1, h2, h3, p {
     opacity: 0;
-    animation: fadeInText 5s ease-in-out forwards;
+    animation: fadeInText 3s ease-in-out forwards;
   }
 
   @keyframes fadeInText {

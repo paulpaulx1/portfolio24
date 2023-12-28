@@ -22,8 +22,8 @@ const App = () => {
     <div>
         <Navbar />
         <AppRoutes />
-        {filteredTabs.map((tab) => (
-          <Header key={tab.path} title={tab.title} />
+        {filteredTabs.map((tab, i) => (
+          <Header key={tab.path} title={tab.title} slideDir={i%2===0?'slide__left':'slide__right'} />
         ))}
     </div>
   );
