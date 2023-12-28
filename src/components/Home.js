@@ -99,6 +99,7 @@ const StyledWelcomeContainer = styled.div`
     max-width: 25vw;
     border-radius: 10px;
     animation: flicker .25s infinite;
+    animation: fadeInText 5s ease-in-out forwards;
   }
   @media screen and (max-width: 800px) {
     .profile-gif {
