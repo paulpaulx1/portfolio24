@@ -18,7 +18,7 @@ function MatrixBackground({ timeout }) {
             height = window.innerHeight;
             canvas.current.width = width;
             canvas.current.height = height;
-            context.fillStyle = 'rgba(0, 0, 0, 0.97)';
+            context.fillStyle = 'rgba(84, 84, 84, 0.97)';
             context.fillRect(0, 0, width, height);
         };
 
@@ -31,7 +31,7 @@ function MatrixBackground({ timeout }) {
         const yPositions = Array.from({ length: columns }).fill(0);
 
         const matrixEffect = () => {
-            context.fillStyle = 'rgba(0, 0, 0, 0.04)';
+            context.fillStyle = 'rgba(84, 84, 84, 0.04)';
             context.fillRect(0, 0, width, height);
             
             yPositions.forEach((y, index) => {
@@ -62,7 +62,7 @@ function MatrixBackground({ timeout }) {
     return (
         <div
             style={{
-                background: 'rgba(0, 0, 0, 0.97)',
+                background: 'rgba(84, 84, 84, 0.97)',
                 overflow: 'hidden',
                 position: 'fixed',
                 height: '100%',

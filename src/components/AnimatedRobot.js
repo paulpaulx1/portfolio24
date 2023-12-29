@@ -24,11 +24,17 @@ const MatrixBackgroundWrapper = styled.div`
     opacity: 0.7; // Adjust for desired translucency
     z-index: 2;
   }
-
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+    border-radius: 4px;
+    height: 25vh;
+    width: 100%;
+}
   canvas {
     display: block;
     width: 100%;
     height: 100%;
+
   }
 `;
 

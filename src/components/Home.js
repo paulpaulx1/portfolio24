@@ -11,6 +11,8 @@ const StyledWelcomeContainer = styled.div`
   margin: 10px;
   color: rgba(60, 60, 60, 0.97);
   overflow: hidden;
+  border: 2px solid rgba(60, 60, 60, 0.57);
+  border-radius: 8px;
 
   &::before {
     content: '';
@@ -23,8 +25,9 @@ const StyledWelcomeContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: fadeBackground 3s ease-in-out forwards;
+    animation: fadeBackground 2s ease-in-out forwards;
     z-index: -1;
+    
   }
 
   @keyframes fadeBackground {
@@ -32,13 +35,13 @@ const StyledWelcomeContainer = styled.div`
       opacity: 1;
     }
     100% {
-      opacity: 0.1;
+      opacity: 0.14;
     }
   }
 
   h1, h2, h3, p {
     opacity: 0;
-    animation: fadeInText 3s ease-in-out forwards;
+    animation: fadeInText 2s ease-in-out forwards;
   }
 
   @keyframes fadeInText {
@@ -55,12 +58,14 @@ const StyledWelcomeContainer = styled.div`
   h1 {
     font-size: 2rem;
     margin-bottom: 10px;
+    font-weight: 800;
   }
 
   h2 {
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 10px;
+    font-weight: 800;
   }
 
   h3 {
@@ -99,7 +104,7 @@ const StyledWelcomeContainer = styled.div`
     max-width: 25vw;
     border-radius: 10px;
     animation: flicker .25s infinite;
-    animation: fadeInText 5s ease-in-out forwards;
+    animation: fadeInText 2s ease-in-out forwards;
   }
   @media screen and (max-width: 800px) {
     .profile-gif {
@@ -112,39 +117,63 @@ const StyledWelcomeContainer = styled.div`
   }
 `;
 
+// Define a keyframe for the border animation
+
+
+const ProfileGif = styled.img`
+  width: 100%;
+  border-radius: 10px;
+  float: right;
+  margin: 20px;
+  max-width: 25vw;
+  border-radius: 10px;
+  border: 4px solid rgba(60, 60, 60, 0.97);
+  animation: flicker 0.25s infinite, fadeInText 5s ease-in-out forwards;
+  /* Add other styles for .profile-gif here */
+
+  @media screen and (max-width: 800px) {
+    max-width: 35vw;
+  }
+`;
+
 const WelcomeMessage = () => {
 
 
   return (
     <StyledWelcomeContainer>
-      <img className="profile-gif slide__right" src="https://res.cloudinary.com/doadukwfh/image/upload/v1703098720/ezgif.com-video-to-gif-converted_ditfw1.gif" alt="skateboarding circa 2002" />
+          <ProfileGif
+        className="profile-gif slide__right"
+        src="https://res.cloudinary.com/doadukwfh/image/upload/v1703098720/ezgif.com-video-to-gif-converted_ditfw1.gif"
+        alt="skateboarding circa 2002"
+      />
 
       <h1>Welcome to Paul's World</h1>
       <p>Hello! I'm Paul. Welcome to my digital space. I have two cats (Buddy and Fin), 
         both of whom constantly demand high quality food and empty cardboard boxes. 
         I used to build stuff out of wood to maintain the influx of cardboard boxes and 
-        luxury catfood but I became a developer in 2020, and I've been an artist for a long time 
-        before that.</p>
-      <h2>DEV</h2>
+        luxury catfood. I became a developer in 2020. I've been an artist for a long time 
+        before that. Thanks for stopping by.</p>
+      <h2>dev</h2>
       <p>
-        I made this site in part to convince people with web dev problems that they 
-        should hire me to solve them. It's built with styled React components, 
-        bundled with webpack, and deployed via Netlify. These were the best tools for this
+        I built this site to showcase my web-dev skills and offer solutions to people with dev problems. It's built with styled React components, 
+        CSS, leverages serverless functions and is deployed via Netlify. These were the best tools for this
         particular job but I can work across the stack in multiple languages.
-        If you want to know more about my professional experience and what I can do for you 
-        check out the tech tab.
+        If you want to know more about what I can do for you check out the tech tab.
+        If you want to know about my professional experience check out the exp tab.
       </p>
-      <h2>ARTIST</h2>
+      <h2>art</h2>
       <p>
         I've made some paintings and painting-adjacent sculptures that hang on the wall (like paintings). 
         You can view them by clicking on the 'art' tab. The paintings are generally titled by the location they
         depict but I sometimes take artistic license when naming them.  The sculpture-adjacent pieces have titles that describe
         what they are as objects but one is just called "Toast" and it's made out of wood and lacquer. 
-        In "The Sims", released February 4, 2000 by Maxis/EA, when you buy art you can increase the "room score".
+        In "The Sims", released February 4, 2000 by Maxis/EA, you can buy art to increase your "room score".
+        It's good for your health.
         If you're interested in increasing your "room score" by all means HMU 908-358-2150 paulmneenan@gmail.com or click the "contact" tab.
         Negotiable sliding scale.
       </p>  
       </StyledWelcomeContainer>
+
 )}
 
 export default WelcomeMessage;
