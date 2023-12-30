@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const DownloadButtonStyled = styled.button`
   grid-column: 1 / -1;
@@ -14,7 +14,7 @@ const DownloadButtonStyled = styled.button`
 `;
 
 const Button = () => (
-<DownloadButtonStyled href="/Dec21Res.pdf" download="My_Resume.pdf">
-        Download Resume
-</DownloadButtonStyled>
-)
+  <DownloadButtonStyled href="/Dec21Res.pdf" download="My_Resume.pdf">
+    Download Resume
+  </DownloadButtonStyled>
+);

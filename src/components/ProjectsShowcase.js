@@ -64,8 +64,8 @@ const ProjectLink = styled.a`
 `;
 
 const projects = [
-  { title: 'PDF Chatter', description: 'Retrieval Augmented Generation App - Python, Langchain, PineconeDB and Redis. Upload PDFs and interact with them. Uses Langchain to prompt LLMs.', link: 'https://github.com/yourproject' },
-  { title: 'Phreditor', description: 'In browser compiler powered by WASM. Catches import statements with regex and reroutes to UNPKG.com. Built with React, Redux and Typescript. Plug in some Javascript with third party libraries and watch it go.', link: 'https://phreditor.netlify.com', active: 'https://phreditor.netlify.com' },
+  { title: 'PDF Chatter', description: 'Developed a Langchain RAG app that enabled uploading and engagement with PDFs, generated embeddings, stored them in PineconeDB, and facilitated unique chat functionality with document content. Implemented a weighted random selection for LLMs, memory buffers, and vector retrieval, guided by user feedback, to continually improve application performance and results.', link: 'https://github.com/yourproject' },
+  { title: 'Phreditor', description: ' In-browser code compiler and editor. Intercepts import statements with regex patterns and reroutes them to UNPKG.com for external library integration. Built with React, Redux, and Typescript. UI built with BulmaCSS and React-Resizable. Plug in some Javascript that uses third party libraries and watch it go.', link: 'https://phreditor.netlify.com', active: 'https://phreditor.netlify.com' },
   { title: 'Aether', description: 'Realtime multiplayer audovisual synth app. Socket.io, Three.js, Redux, Firebase, Tone.js. Completed on a team of 4 at Fullstack Academy using Agile Methodologies.', link: 'https://github.com/paulpaulx1/aether' },
 ];
 

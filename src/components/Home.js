@@ -151,26 +151,34 @@ const WelcomeMessage = () => {
       <p>Hello! I'm Paul. Welcome to my digital space. I have two cats (Buddy and Fin), 
         both of whom constantly demand high quality food and empty cardboard boxes. 
         I used to build stuff out of wood to maintain the influx of cardboard boxes and 
-        luxury catfood. I became a developer in 2020. I've been an artist for a long time 
-        before that. Thanks for stopping by.</p>
+        luxury catfood. I pivoted to software development in 2020 which surprisingly also 
+        meets the high standards of my feline companions. This website is a reflection of my 
+        skills in user experience development, proficiency in written communication, 
+        and artistic endeavors. It's a more comprehensive and more fun alternative to a standard resume 
+        (which you're welcome to download). Thanks for stopping by.</p>
       <h2>dev</h2>
       <p>
-        I built this site to showcase my web-dev skills and offer solutions to people with dev problems. It's built with styled React components, 
-        CSS, leverages serverless functions and is deployed via Netlify. These were the best tools for this
-        particular job but I can work across the stack in multiple languages.
-        If you want to know more about what I can do for you check out the tech tab.
-        If you want to know about my professional experience check out the exp tab.
+        As a developer, my strength lies in dissecting complex problems, systems and concepts
+        into fundamental components and reassembling them into cohesive solutions, mental models
+        or applications. I also type really fast and rarely make typos. 
+        This website is built with styled React components and CSS, powered by serverless functions 
+        and deployed via Netlify. These were the best tools for this job, but my proficiency
+        extends across various layers of the tech stack - I'm a language-agnostic developer 
+        who loves discovering new tools. If you want to know more about what I can do for you 
+        check out the tech tab. If you want to know about my professional experience 
+        check out the exp tab.
       </p>
       <h2>art</h2>
       <p>
         I've made some paintings and painting-adjacent sculptures that hang on the wall (like paintings). 
-        You can view them by clicking on the 'art' tab. The paintings are generally titled by the location they
-        depict but I sometimes take artistic license when naming them.  The sculpture-adjacent pieces have titles that describe
-        what they are as objects but one is just called "Toast" and it's made out of wood and lacquer. 
-        In "The Sims", released February 4, 2000 by Maxis/EA, you can buy art to increase your "room score".
-        It's good for your health.
-        If you're interested in increasing your "room score" by all means HMU 908-358-2150 paulmneenan@gmail.com or click the "contact" tab.
-        Negotiable sliding scale.
+        Check out the 'art' tab. The paintings are generally named after the places they depict 
+        but I sometimes take artistic license when naming them. The sculpture-adjacent pieces 
+        have titles that describe them as literal objects but one is just called "Toast" even though it's 
+        made out of wood and lacquer. In "The Sims", released February 4, 2000 by Maxis/EA, 
+        you can buy art to increase your "room score". A good room score is good for your health. 
+        If you're interested in increasing your "room score" by all means HMU. 
+        908-358-2150 paulmneenan@gmail.com or click the "contact" tab.
+        Negotiable sliding scale. It's good for your health.
       </p>  
       </StyledWelcomeContainer>
 

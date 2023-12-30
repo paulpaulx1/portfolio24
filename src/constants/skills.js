@@ -22,15 +22,15 @@
     'Version Control',
     'ORMs / DBs',
     "Content Management Systems",
-    'Serverless Functions',
+    'Serverless Architecture',
     "Prompting LLM's"
   ]
 
   export const nonTechSkills = [
     'Meticulous Project Documentation',
     'Written Communication',
-    'Asking Good Questions',
-    'Independent Research AKA Figuring Shit Out',
+    'Effective Questioning',
+    'Independent Research & Problem Solving',
   ]
   
  export const softSkills = [
