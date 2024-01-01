@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const DownloadButtonStyled = styled.button`
+const DownloadButtonStyled = styled.a`
   grid-column: 1 / -1;
   justify-self: center;
   padding: 20px;
@@ -11,10 +11,15 @@ const DownloadButtonStyled = styled.button`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0 6px;
 `;
 
-const Button = () => (
-  <DownloadButtonStyled href="/Dec21Res.pdf" download="My_Resume.pdf">
+export const Button = () => (
+  <DownloadButtonStyled href="./2024Resume.pdf" download="2024Resume.pdf">
     Download Resume
   </DownloadButtonStyled>
 );

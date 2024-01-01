@@ -150,20 +150,20 @@ const WelcomeMessage = () => {
       <h1>Welcome to Paul's World</h1>
       <p>Hello! I'm Paul. Welcome to my digital space. I have two cats (Buddy and Fin), 
         both of whom constantly demand high quality food and empty cardboard boxes. 
-        I used to build stuff out of wood to maintain the influx of cardboard boxes and 
-        luxury catfood. I pivoted to software development in 2020 which surprisingly also 
-        meets the high standards of my feline companions. This website is a reflection of my 
-        skills in user experience development, proficiency in written communication, 
-        and artistic endeavors. It's a more comprehensive and more fun alternative to a standard resume 
+        I used to make stuff out of wood to maintain the influx of cardboard boxes and 
+        luxury catfood. I pivoted to software development in 2020, which has also 
+        managed to meet the high standards of my feline companions. This website reflects my 
+        skills in user experience development, written communication, and visual art. 
+        It's a more comprehensive and more fun alternative to a standard resume 
         (which you're welcome to download). Thanks for stopping by.</p>
       <h2>dev</h2>
       <p>
         As a developer, my strength lies in dissecting complex problems, systems and concepts
         into fundamental components and reassembling them into cohesive solutions, mental models
-        or applications. I also type really fast and rarely make typos. 
-        This website is built with styled React components and CSS, powered by serverless functions 
+        and applications. I also type fast and rarely make typos. This website is built 
+        with styled React components and CSS, powered by serverless functions 
         and deployed via Netlify. These were the best tools for this job, but my proficiency
-        extends across various layers of the tech stack - I'm a language-agnostic developer 
+        extends across various layers of the tech stack; I'm a language-agnostic developer 
         who loves discovering new tools. If you want to know more about what I can do for you 
         check out the tech tab. If you want to know about my professional experience 
         check out the exp tab.
