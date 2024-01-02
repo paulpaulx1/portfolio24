@@ -1,23 +1,23 @@
-import { nanoid } from "nanoid";
 import React from "react";
-import { artArray } from "../constants/img_map";
+import { nanoid } from "nanoid";
 import { LazyLoadedImage } from "./LazyLoadedImage";
-import { art_titles } from '../constants/art_titles'
+import { artData } from "../constants/art_titles"; // Updated import
 
 const Art = () => {
-
-return (
+  return (
     <div className="artgrid">
-    {artArray.map((title, i) => (
-      <LazyLoadedImage
-        slideDir={`slide__${i % 2 === 0 ? "left" : "right"}`}
-        src={title}
-        alt={`Artwork ${i + 1}`}
-        title={art_titles[i]}
-        key={nanoid()}
-      />
-    ))}
-  </div>
-);
-    }
+      {artData.map((art, i) => (
+        <LazyLoadedImage
+          src={art.src} // Assuming artData includes a 'src' key
+          alt={`Artwork ${i + 1}`}
+          title={art.title}
+          dimensions={art.dimensions}
+          material={art.material}
+          key={nanoid()}
+        />
+      ))}
+    </div>
+  );
+};
+
 export default Art;

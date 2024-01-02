@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { nanoid } from 'nanoid';
 
 import { languages, tech, libraries, nonTechSkills } from '../constants/skills';
 
@@ -77,9 +78,9 @@ const ToggleableSkills = () => {
   return (
     <div>
       <ToggleButtons>
-        {Object.keys(skillMap).map((key, index) => (
+        {Object.keys(skillMap).map((key) => (
           <ToggleButton
-            key={index}
+            key={nanoid()}
             onClick={() => handleArrayChange(key)}
             style={{
               backgroundColor: selectedArray === skillMap[key] ? 'green' : 'white',
@@ -93,7 +94,7 @@ const ToggleableSkills = () => {
       <SkillListContainer>
         <SkillList>
           {selectedArray.map((skill, index) => (
-            <SkillItem key={index}>{skill}</SkillItem>
+            <SkillItem key={nanoid()}>{skill}</SkillItem>
           ))}
         </SkillList>
       </SkillListContainer>

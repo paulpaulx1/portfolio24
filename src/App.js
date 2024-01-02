@@ -3,6 +3,7 @@ import Navbar from "./components/Nametag";
 import { AppRoutes } from "./Routes";
 import { Header } from "./components/Header";
 import { useLocation } from "react-router-dom";
+import { nanoid } from 'nanoid'
 
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
         <AppRoutes />
         {filteredTabs.map((tab, i) => (
           <Header
-            key={tab.path}
+            key={nanoid()}
             title={tab.title}
             slideDir={i % 2 === 0 ? "slide__left" : "slide__right"}
           />

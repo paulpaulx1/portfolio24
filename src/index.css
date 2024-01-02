@@ -55,6 +55,7 @@
   animation: 1s ease-out 0s 1 slideInBottom;
 }
 
+
 @keyframes turn-on {
   0% {
     filter: brightness(30);
@@ -175,6 +176,7 @@ body * {
 .artgriditem {
   width: 21rem;
   flex-grow: 1;
+  border: 1px solid rgba(84, 84, 84, 0.5);
   margin: 10px;
   cursor: zoom-in;
 }
@@ -190,6 +192,8 @@ body * {
     width: unset;
   }
 }
+
+
 
 .image-container {
   opacity: 0;

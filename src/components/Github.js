@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { nanoid } from 'nanoid';
 
 const GitHubContainer = styled.div`
   padding: 20px;
@@ -43,8 +44,8 @@ const GitHub = () => (
     <GitHubTitle>GitHub Repos</GitHubTitle>
     <p>GitHub: {githubUsername}</p>
     <ProjectList>
-      {projects.map((project, index) => (
-        <ProjectItem key={index}>{project}</ProjectItem>
+      {projects.map((project) => (
+        <ProjectItem key={nanoid()}>{project}</ProjectItem>
       ))}
     </ProjectList>
   </GitHubContainer>

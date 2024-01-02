@@ -15,7 +15,6 @@ const DownloadButtonStyled = styled.a`
   display: flex;
   justify-content: center;
   text-decoration: none;
-  margin: 0 6px;
 `;
 
 export const Button = () => (

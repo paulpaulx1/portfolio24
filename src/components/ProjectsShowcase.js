@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { nanoid } from 'nanoid';
 
 const ProjectsTitle = styled.h1`
   text-align: center;
@@ -73,7 +74,7 @@ const ProjectsShowcase = () => (
   <ProjectsContainer>
     <ProjectsTitle>Projects</ProjectsTitle>
     {projects.map(project => (
-      <ProjectCard key={project.title}>
+      <ProjectCard key={nanoid()}>
         <ProjectTitle>{project.title}</ProjectTitle>
         <ProjectDescription>{project.description}</ProjectDescription>
         <ProjectLink href={project.link} target="_blank">GitHub</ProjectLink>

@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { nanoid } from "nanoid";
 import Loading from "./Loading";
 import { ArtworkLabel } from "./ArtworkLabel";
 import "./art.css"; // Import your stylesheet
 
-export const LazyLoadedImage = ({
-  src,
-  alt,
-  title,
-  dimensions,
-  material,
-}) => {
+export const LazyLoadedImage = ({ src, alt, title, dimensions, material }) => {
   const [loaded, setLoaded] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-
 
   const handleImageLoad = () => {
     setLoaded(true);
@@ -32,11 +24,7 @@ export const LazyLoadedImage = ({
 
   return (
     <>
-      <div
-        className={`${loaded ? "loaded" : ""}`}
-        onClick={openModal}
-        key={nanoid()}
-      >
+      <div className={`card ${loaded ? "loaded" : ""}`} onClick={openModal}>
         <img
           src={src}
           alt={alt}
@@ -44,38 +32,42 @@ export const LazyLoadedImage = ({
           onLoad={handleImageLoad}
           loading="lazy"
         />
-        {!loaded && <Loading className="artgriditem fade-in" />}
+        {!loaded && <Loading />}
         {loaded && (
-          <ArtworkLabel
-            title={title}
-            dimensions={dimensions}
-            material={material}
-            inModal={modalIsOpen}
-          />
+          <div className="card-info">
+            <ArtworkLabel
+              title={title}
+              dimensions={dimensions}
+              material={material}
+            />
+          </div>
         )}
       </div>
       {modalIsOpen && (
-        <>
-          <button onClick={closeModal} className="close-button">
-            Close
-          </button>
-          <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            contentLabel="Artwork Modal"
-            className="modal-content"
-            overlayClassName="modal-overlay"
-          >
-            {loaded ? (
-              <>
-                <img src={src} alt={alt} className="modal-img" />
-                <ArtworkLabel title={title} inModal={modalIsOpen} />
-              </>
-            ) : (
-              <Loading />
-            )}
-          </Modal>
-        </>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Artwork Modal"
+          className="modal-content"
+          overlayClassName="modal-overlay"
+        >
+          <button onClick={closeModal} className="close-button">Close</button>
+          {loaded ? (
+            <>
+              <img src={src} alt={alt} className="modal-img" />
+              <div className="modal-info">
+                <ArtworkLabel
+                  title={title}
+                  dimensions={dimensions}
+                  material={material}
+                  inModal={modalIsOpen}
+                />
+              </div>
+            </>
+          ) : (
+            <Loading />
+          )}
+        </Modal>
       )}
     </>
   );

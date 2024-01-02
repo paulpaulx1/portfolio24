@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { nanoid } from 'nanoid'
 
 const SkillsContainer = styled.div`
   padding: 20px;
@@ -35,7 +36,7 @@ const SkillsDisplay = ({ skills, title }) => (
     <SkillTitle>{title}</SkillTitle>
     <SkillList>
       {skills.map(skill => (
-        <SkillItem key={skill}>{skill}</SkillItem>
+        <SkillItem key={nanoid()}>{skill}</SkillItem>
       ))}
     </SkillList>
   </SkillsContainer>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { nanoid } from 'nanoid'
 
 // Import your image URLs and content here
 const cardData = [
@@ -19,8 +20,8 @@ const cardData = [
   date: '2020-2021',
   location: 'Remote due to pandemic',
   summary: 'Coding Bootcamp!',
-  imageUrl: 'https://lh3.googleusercontent.com/p/AF1QipO7LwoGig1LSelLMggYMgmZQEqpoKrRxGJC3DRx=s680-w680-h510',
-  bulletPoints: ['PostgreSQL | Sequelize ORM | Express.js/REST | Node | React | Redux | Heroku', 'Hashing | Stacks | BFS | DFS | Trees | Linked Lists', 'Built CRUD Apps. Built https://github.com/paulpaulx1/aether'],
+  imageUrl: 'Coding Bootcamp.jpg',
+  bulletPoints: ['JS Stack: PostgreSQL | Sequelize ORM | Express.js/REST | Node | React | Redux | Heroku', 'Hashing | Stacks | BFS | DFS | Trees | Linked Lists', 'Built CRUD Apps. Built https://github.com/paulpaulx1/aether'],
 },
 {
   title: 'Bednark Studio',
@@ -31,25 +32,26 @@ const cardData = [
   bulletPoints: ['Worked in the millwork dept. here. Primarily high end residential projects in NYC.', 'Responsible for color matching, spray finishing and installation of six/seven-figure woodworking jobs.'],
 },
 {
-  title: 'PopChart - Woodshop Manager 2013-2018',
+  title: 'PopChart - Woodshop Manager',
   date: '2013-2018',
   location: 'Greenpoint Brooklyn, NY',
-  summary: 'Short summary of the experience at PopChart.',
+  summary: 'Floor manager of a picture frame woodshop for 5 yrs',
   imageUrl: 'woodshop.png',
-  bulletPoints: ['Poster design company. We manufactured our own picture frames but they moved the operation to Indiana in 2018.', 'Trained 40+ employees in basic woodworking. Safety first.', 'Maintained machinery, spray booth, built stuff out of wood and sprayed it with paint and lacquer.'],
+  bulletPoints: ['Poster design company. We manufactured our own picture frames but they moved the operation to Indiana in 2018.', 'Trained 40+ employees in basic woodworking. Safety first. Oversaw crews of 4-10 people based on necessity for seasonal workers.', 'Maintained machinery, spray booth, built stuff out of wood and sprayed it with paint and lacquer.'],
 },
 {
   title: 'Brooklyn College - MFA',
   location: 'Flatbush Brooklyn, NY',
   summary: 'Multi-Disciplinary Studio Art MFA Program',
   imageUrl: 'mini-monuments.png',
-  bulletPoints: ['Independent studio work; I made a lot of stuff out of cement here', 'Improved writing & communication skills', 'Courswork in the history of design','Advisors: Vito Acconci, Jennifer McCoy, Wendy White'],
+  bulletPoints: ['Independent studio work; I made a lot of stuff out of cement here.', 'Improved writing & communication skills', 'Coursework in the history of design.','Advisors: Vito Acconci, Jennifer McCoy, Wendy White'],
 },
 {
   title: 'Alfred University - BFA',
   location: 'Alfred, NY',
+  summary: 'Multi-Disciplinary Studio Art BFA Program',
   imageUrl: 'ceramics.png',
-  bulletPoints: ['Fired huge kilns', 'Treasurer of the Independent Noise Research Club', 'Studio practice guided by Bauhaus principles'],
+  bulletPoints: ['Learned about art and design. Made paintings, sculptures and sonic art.', 'Treasurer of the Independent Noise Research Club', 'Trained in classical Bauhaus principles of design.'],
 }
 ];
 
@@ -58,7 +60,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   @media screen and (max-width: 600px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 `;
 
@@ -67,20 +69,22 @@ const Card = styled.div`
   flex-direction: row;
   align-items: flex-start;
   gap: 20px;
-  border: 2px solid grey;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(84, 84, 84, 0.97);
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
+  &.alternate { flex-direction: row-reverse;}
   @media screen and (max-width: 600px) {
     flex-direction: column;
     align-items: center;
+    &.alternate { flex-direction: column;}
   }
-  &.alternate { flex-direction: row-reverse;}
 `;
 
 const CardImage = styled.img`
   border-radius: 4px;
-  border: 3px solid grey;
+  border: 2px solid black;
   max-width: 180px;
   max-height: 180px;
   @media screen and (max-width: 600px) {
@@ -111,6 +115,7 @@ const CardDetails = styled.div`
 const CardSummary = styled.p`
   font-size: 16px;
   color: #333;
+  margin-bottom: 6px;
 `;
 
 const CardBulletPoints = styled.ul`
@@ -123,7 +128,7 @@ const CardBulletPoint = styled.li`
 `;
 
 const CardComponent = ({ title, date, location, summary, imageUrl, bulletPoints, index }) => (
-  <Card className={index % 2 === 0 ? 'alternate' : ''}>
+  <Card className={index % 2 === 0 ? 'slide__right' : 'alternate slide__left'}>
     <CardImage src={imageUrl} alt={title} />
     <CardContent>
       <CardTitle>{title}</CardTitle>
@@ -133,7 +138,7 @@ const CardComponent = ({ title, date, location, summary, imageUrl, bulletPoints,
       <CardSummary>{summary}</CardSummary>
       <CardBulletPoints>
         {bulletPoints.map((point, index) => (
-          <CardBulletPoint key={index}>{point}</CardBulletPoint>
+          <CardBulletPoint key={nanoid()}>{point}</CardBulletPoint>
         ))}
       </CardBulletPoints>
     </CardContent>
@@ -143,7 +148,7 @@ const CardComponent = ({ title, date, location, summary, imageUrl, bulletPoints,
 const CardList = () => (
   <CardContainer>
     {cardData.map((card, index) => (
-      <CardComponent key={index} index={index} {...card} />
+      <CardComponent key={nanoid()} index={index} {...card} />
     ))}
   </CardContainer>
 );

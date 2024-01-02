@@ -11,7 +11,7 @@ const WrapperContainer = styled.div`
   grid-template-columns: 1fr 1fr; // Two columns for desktop
   gap: 20px;
   padding: 20px;
-  margin: 10px;
+  margin: 14px;
   border-radius:8px;
   background: white;
   @media (max-width: 768px) {
