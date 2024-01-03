@@ -1,18 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import { nanoid } from 'nanoid';
+import React from "react";
+import styled from "styled-components";
+import { nanoid } from "nanoid";
 
 const ProjectsTitle = styled.h1`
   text-align: center;
   grid-column: 1/-1;
-  font-size: 24px; 
-  color: rgba(84, 84, 84, 0.97); 
+  font-size: 24px;
+  color: rgba(84, 84, 84, 0.97);
   font-weight: 800;
   padding: 8px;
-  margin-top:2px;
-  margin-bottom: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-
+  margin-top: 2px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const ProjectsContainer = styled.div`
@@ -37,7 +36,7 @@ const ProjectCard = styled.div`
   border-radius: 5px; // Rounded borders like SkillItem
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Shadow style from SkillItem
   padding: 10px;
-  font-family: 'Raleway'; // Font from SkillItem
+  font-family: "Raleway"; // Font from SkillItem
   color: #333; // Text color from SkillItem
 `;
 
@@ -61,13 +60,43 @@ const ProjectLink = styled.a`
   text-decoration: none;
   color: rgba(84, 84, 84, 0.97); // Text color from SkillItem
   font-weight: 800;
-  &:hover { color: green;}
+  margin-bottom: 10px;
+  &:hover {
+    color: green;
+  }
 `;
 
+const ProjectImage = styled.img`
+  width: 100%; // Sets image width to fit the card
+  height: auto; // Maintains aspect ratio
+  margin-bottom: 10px; // Adds space below the image
+  border-radius: 5px; // Optional: to match the card's border radius
+`;
+
+
 const projects = [
-  { title: 'PDF Chatter', description: 'Developed a Langchain RAG app that enabled uploading and engagement with PDFs, generated embeddings, stored them in PineconeDB, and facilitated unique chat functionality with document content. Implemented a weighted random selection for LLMs, memory buffers, and vector retrieval, guided by user feedback, to continually improve application performance and results.', link: 'https://github.com/yourproject' },
-  { title: 'Phreditor', description: ' In-browser code compiler and editor. Intercepts import statements with regex patterns and reroutes them to UNPKG.com for external library integration. Built with React, Redux, and Typescript. UI built with BulmaCSS and React-Resizable. Plug in some Javascript that uses third party libraries and watch it go.', link: 'https://phreditor.netlify.com', active: 'https://phreditor.netlify.com' },
-  { title: 'Aether', description: 'Realtime multiplayer audovisual synth app. Socket.io, Three.js, Redux, Firebase, Tone.js. Completed on a team of 4 at Fullstack Academy using Agile Methodologies.', link: 'https://github.com/paulpaulx1/aether' },
+  {
+    title: "PDF Chatter",
+    description:
+      "Developed a Langchain RAG app that enabled uploading and engagement with PDFs, generated embeddings, stored them in PineconeDB, and facilitated unique chat functionality with document content. Implemented a weighted random selection for LLMs, memory buffers, and vector retrieval, guided by user feedback, to continually improve application performance and results.",
+    link: "https://github.com/yourproject",
+    imageUrl: 'pdf chatter.jpg'
+  },
+  {
+    title: "Phreditor",
+    description:
+      " In-browser code compiler and editor. Intercepts import statements with regex patterns and reroutes them to UNPKG.com for external library integration. Built with React, Redux, and Typescript. UI built with BulmaCSS and React-Resizable. Plug in some Javascript that uses third party libraries and watch it go.",
+    link: "https://phreditor.netlify.com",
+    active: "https://phreditor.netlify.com",
+    imageUrl: 'phreditor2.jpg'
+  },
+  {
+    title: "Aether",
+    description:
+      "Realtime multiplayer audovisual synth app. Socket.io, Three.js, Redux, Firebase, Tone.js. Completed on a team of 4 at Fullstack Academy using Agile Methodologies. Animated a spinning clock hand within a circle, when it intercepts user generated shapes a sound is played. Collision detection with bounding boxes in three.js. Redux/Socket manages real time multiplayer state.",
+    link: "https://github.com/paulpaulx1/aether",
+    imageUrl: 'aether2.jpg'
+  },
 ];
 
 const ProjectsShowcase = () => (
@@ -79,6 +108,7 @@ const ProjectsShowcase = () => (
         <ProjectDescription>{project.description}</ProjectDescription>
         <ProjectLink href={project.link} target="_blank">GitHub</ProjectLink>
         {project.active && <div><ProjectLink href={project.active} target="_blank">{project.active}</ProjectLink></div>}
+        {project.imageUrl && <ProjectImage src={project.imageUrl} alt={project.title} />}
       </ProjectCard>
     ))}
   </ProjectsContainer>
