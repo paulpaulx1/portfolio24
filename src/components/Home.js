@@ -173,8 +173,7 @@ const WelcomeMessage = () => {
         I've made some paintings and painting-adjacent sculptures that hang on the wall (like paintings). 
         Check out the 'art' tab. The paintings are generally named after the places they depict 
         but I sometimes take artistic license when naming them. The sculpture-adjacent pieces 
-        have titles that describe them as literal objects but one is just called "Toast" even though it's 
-        made out of wood and lacquer. In "The Sims", released February 4, 2000 by Maxis/EA, 
+        have titles that describe them as literal objects (i.e folding panel) but one is just called "Toast". In "The Sims", released February 4, 2000 by Maxis/EA, 
         you can buy art to increase your "room score". A good room score is good for your health. 
         If you're interested in increasing your "room score" by all means HMU. 
         908-358-2150 paulmneenan@gmail.com or click the "contact" tab.
