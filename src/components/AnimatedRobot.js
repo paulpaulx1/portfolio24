@@ -18,7 +18,7 @@ const MatrixBackgroundWrapper = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://res.cloudinary.com/doadukwfh/image/upload/v1703787082/DALL_E_2023-12-28_13.03.46_-_Imagine_a_more_muscular_robot_with_defined_powerful-looking_limbs_sitting_at_a_desk._This_robot_is_focused_on_writing_code_on_a_large_advanced_mon_puynif.png'); // Replace with your image URL
+    background-image: url('musclerobot.jpg'); // Replace with your image URL
     background-size: cover;
     background-position: center;
     opacity: 0.7; // Adjust for desired translucency
