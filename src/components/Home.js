@@ -143,7 +143,7 @@ const WelcomeMessage = () => {
     <StyledWelcomeContainer>
           <ProfileGif
         className="profile-gif slide__right"
-        src="https://res.cloudinary.com/doadukwfh/image/upload/v1703098720/ezgif.com-video-to-gif-converted_ditfw1.gif"
+        src="skateboard.gif"
         alt="skateboarding circa 2002"
       />
 
