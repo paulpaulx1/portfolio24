@@ -43,6 +43,11 @@
     position: relative;
     border: none;
   }
+
+  .modal-content:focus-visible {
+    border: none;
+    outline: none !important;
+  }
   
   .close-button {
     position: fixed;
