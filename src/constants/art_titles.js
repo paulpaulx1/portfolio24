@@ -1,7 +1,7 @@
 export const artData = [
   {
     title: "Terra",
-    src: "terra.jpeg",
+    src: "terra.jpg",
     dimensions: "18x24 in",
     material: "Oil on Panel",
   },
