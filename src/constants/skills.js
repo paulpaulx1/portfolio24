@@ -21,8 +21,6 @@
     'Node',
     'Version Control',
     'ORMs / DBs',
-    "Content Management Systems",
-    'Serverless Architecture',
     "Prompting LLM's"
   ]
 

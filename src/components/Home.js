@@ -161,12 +161,12 @@ const WelcomeMessage = () => {
         As a developer, my strength lies in dissecting complex problems, systems and concepts
         into fundamental components and reassembling them into cohesive solutions, mental models
         and applications. I also type fast and rarely make typos. This website is built 
-        with styled React components and CSS, powered by serverless functions 
-        and deployed via Netlify. These were the best tools for this job, but my proficiency
-        extends across various layers of the tech stack; I'm a language-agnostic developer 
-        who loves discovering new tools. If you want to know more about what I can do for you 
-        check out the tech tab. If you want to know about my professional experience 
-        check out the exp tab.
+        with React and CSS and deployed on Netlify. I view tech as a means to an end, whatever 
+        tool or language is best suited to the task at hand is the one I'll use. I can learn, adapt, 
+        get stuck, and get unstuck. I can work independently or with a team and explain technical concepts
+        to non-technical people. If you want to know more about what I can do for you check out the tech tab. 
+        If you want to know about my professional experience check out the exp tab. Or just send me an email at
+        paulmneenan@gmail.com.
       </p>
       <h2>art</h2>
       <p>
