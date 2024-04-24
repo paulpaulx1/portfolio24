@@ -1,5 +1,11 @@
 export const artData = [
   {
+    title: "Golden Hour",
+    src: "golden_hour.jpg",
+    dimensions: "18x24 in",
+    material: "Oil on Panel",
+  },
+  {
     title: "Terra",
     src: "terra.jpg",
     dimensions: "18x24 in",
