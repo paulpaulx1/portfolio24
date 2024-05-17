@@ -18,7 +18,7 @@ const DownloadButtonStyled = styled.a`
 `;
 
 export const Button = () => ( 
-  <DownloadButtonStyled href="./May15_PaulNeenan_Resume.pdf" download="public/Apr2424_PaulNeenan.pdf">
+  <DownloadButtonStyled href="./May15_PaulNeenan_Resume.pdf" download="public/May15_PaulNeenan_Resume.pdf">
     Download Resume
   </DownloadButtonStyled>
 );
