@@ -17,8 +17,8 @@ const DownloadButtonStyled = styled.a`
   text-decoration: none;
 `;
 
-export const Button = () => (
-  <DownloadButtonStyled href="./Apr2424_PaulNeenan.pdf" download="public/Apr2424_PaulNeenan.pdf">
+export const Button = () => ( 
+  <DownloadButtonStyled href="./May15_PaulNeenan_Resume.pdf" download="public/Apr2424_PaulNeenan.pdf">
     Download Resume
   </DownloadButtonStyled>
 );
